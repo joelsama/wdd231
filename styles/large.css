@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .about, .photo {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .about {
+    width: 60%;
+  }
+
+  .photo {
+    width: 35%;
+    margin-left: 2rem;
+  }
+
+  .courses {
+    clear: both;
+  }
+}
