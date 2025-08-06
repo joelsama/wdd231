@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Eko Hotels & Suites",
+    "address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos",
+    "phone": "+234 1 277 2700",
+    "website": "https://www.ekohotels.com",
+    "image": "workers/female-1.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Dangote Group",
+    "address": "Union Marble House, 1 Alfred Rewane Road, Ikoyi, Lagos",
+    "phone": "+234 1 448 0815",
+    "website": "https://www.dangote.com",
+    "image": "workers/male-1.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Flutterwave",
+    "address": "8 Providence Street, Lekki Phase 1, Lagos",
+    "phone": "+234 1 700 356",
+    "website": "https://www.flutterwave.com",
+    "image": "workers/female-2.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Innoson Motors",
+    "address": "Lagos Sales Office, Victoria Island, Lagos",
+    "phone": "+234 803 600 7000",
+    "website": "https://www.innosongroup.com",
+    "image": "workers/male-2.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Konga",
+    "address": "Yudala Heights, Opebi Road, Ikeja, Lagos",
+    "phone": "+234 809 460 5555",
+    "website": "https://www.konga.com",
+    "image": "workers/female-3.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Jumia Nigeria",
+    "address": "Lekki Phase 1, Lagos",
+    "phone": "+234 1 888 1100",
+    "website": "https://www.jumia.com.ng",
+    "image": "workers/male-3.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Techpoint Africa",
+    "address": "312 Herbert Macaulay Way, Yaba, Lagos",
+    "phone": "+234 809 123 4567",
+    "website": "https://techpoint.africa",
+    "image": "workers/female-1.jpg",
+    "membership": 1
+  }
+]
