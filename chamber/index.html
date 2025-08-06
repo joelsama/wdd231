@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Lagos Chamber of Commerce - promoting business, trade, and investment.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Join us in promoting trade and investment in Lagos, Nigeria.">
+  <meta property="og:image" content="images/lagos-og-image.jpeg">
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/index.html">
+  <title>Lagos Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Lagos Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/lagos-og-image.jpeg" alt="Lagos skyline">
+      <div class="hero-text">
+        <h2>Connecting Lagos Businesses</h2>
+        <a class="cta-btn" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>August 15 – Lagos Business Networking Breakfast</li>
+        <li>August 25 – Trade & Investment Forum</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather">
+      <h2>Weather in Lagos</h2>
+      <p id="current-temp"></p>
+      <p id="description"></p>
+      <div id="forecast"></div>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section id="spotlights">
+      <h2>Member Spotlights</h2>
+      <div class="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Lagos Chamber of Commerce</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="js/home.js" type="module"></script>
+</body>
+</html>
