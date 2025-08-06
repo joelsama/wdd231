@@ -1,0 +1,133 @@
+/* join.css */
+
+/* General layout for join and thankyou pages */
+
+@import url('style.css');
+
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+h2 {
+  color: #004080;
+  margin-top: 0;
+}
+
+/* Form styling */
+form {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background: #004080;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+  background: #0066cc;
+}
+
+/* Membership cards */
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-card {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.membership-card h3 {
+  margin-top: 0;
+}
+
+.membership-card a {
+  color: #004080;
+  text-decoration: underline;
+}
+
+/* Modal styling */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Thank you page styles */
+.thankyou {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.thankyou h2 {
+  color: #28a745;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+  .membership-cards {
+    grid-template-columns: 1fr;
+  }
+}

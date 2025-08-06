@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+<header>
+  <h1>Lagos Chamber of Commerce</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Thank You for Joining!</h2>
+  <div id="submitted-info"></div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Lagos Chamber of Commerce</p>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const infoDiv = document.getElementById('submitted-info');
+
+  const fields = [
+    { label: 'First Name', key: 'firstName' },
+    { label: 'Last Name', key: 'lastName' },
+    { label: 'Email', key: 'email' },
+    { label: 'Phone', key: 'phone' },
+    { label: 'Organization Name', key: 'orgName' },
+    { label: 'Timestamp', key: 'timestamp' }
+  ];
+
+  fields.forEach(f => {
+    const value = params.get(f.key) || 'Not provided';
+    const p = document.createElement('p');
+    p.innerHTML = `<strong>${f.label}:</strong> ${value}`;
+    infoDiv.appendChild(p);
+  });
+</script>
+</body>
+</html>
