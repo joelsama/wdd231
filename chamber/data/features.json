@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Nike Art Gallery",
+    "image": "images/nike.jpg",
+    "address": "Lekki, Lagos",
+    "description": "One of the largest art galleries in West Africa with vibrant exhibitions."
+  },
+  {
+    "name": "Lekki Conservation Centre",
+    "image": "images/lekki.jpg",
+    "address": "Lekki, Lagos",
+    "description": "A serene nature reserve with a canopy walkway and wildlife."
+  },
+  {
+    "name": "Freedom Park",
+    "image": "images/freedom.jpg",
+    "address": "Broad Street, Lagos Island",
+    "description": "A historic site turned park for concerts, festivals, and public events."
+  },
+  {
+    "name": "Terra Kulture",
+    "image": "images/terra.jpg",
+    "address": "Victoria Island, Lagos",
+    "description": "The hub for Nigerian art, theater, and cuisine."
+  },
+  {
+    "name": "Tarkwa Bay Beach",
+    "image": "images/tarkwa.png",
+    "address": "Island, Lagos",
+    "description": "A sheltered beach known for surfing and relaxing vibes."
+  },
+  {
+    "name": "National Museum Lagos",
+    "image": "images/museum.jpg",
+    "address": "Onikan, Lagos",
+    "description": "Home to Nigeria’s rich cultural and historical artifacts."
+  },
+  {
+    "name": "Elegushi Beach",
+    "image": "images/elegushi.jpg",
+    "address": "Lekki, Lagos",
+    "description": "Private beach with live music, food, and nightlife."
+  },
+  {
+    "name": "Omenka Gallery",
+    "image": "images/omenka.jpg",
+    "address": "Ikoyi, Lagos",
+    "description": "Contemporary African art and international exhibitions."
+  }
+]

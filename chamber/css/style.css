@@ -299,3 +299,93 @@ dialog::backdrop {
     margin-top: 0;
   }
 }
+
+.discover-grid {
+  display: grid;
+  grid-template-areas:
+    "sidebar"
+    "features";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.features {
+  grid-area: features;
+  display: grid;
+  gap: 1rem;
+}
+
+.features article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.features article:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.features figure {
+  margin: 0;
+}
+
+.features img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.features h2 {
+  margin: 0.5rem;
+}
+
+.features address,
+.features p {
+  margin: 0.5rem;
+}
+
+.features button {
+  margin: 0.5rem;
+  background-color: navy;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-areas: "sidebar features";
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card img {
+  width: 100%;        
+  height: auto;       
+  max-width: 300px;   
+  border-radius: 5px; 
+  object-fit: cover;  
+}
