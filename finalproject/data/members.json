@@ -1,0 +1,94 @@
+{
+  "members": [
+    {
+      "name": "Adaobi Okafor",
+      "role": "Frontend Developer",
+      "email": "adaobi@lagostech.com",
+      "joined": "2023-06-12"
+    },
+    {
+      "name": "Tunde Bakare",
+      "role": "Backend Developer",
+      "email": "tunde@lagostech.com",
+      "joined": "2022-11-03"
+    },
+    {
+      "name": "Zainab Bello",
+      "role": "UI/UX Designer",
+      "email": "zainab@lagostech.com",
+      "joined": "2024-01-27"
+    },
+    {
+      "name": "Emeka Nwosu",
+      "role": "Mobile App Developer",
+      "email": "emeka@lagostech.com",
+      "joined": "2023-09-14"
+    },
+    {
+      "name": "Ngozi Umeh",
+      "role": "Data Scientist",
+      "email": "ngozi@lagostech.com",
+      "joined": "2023-02-18"
+    },
+    {
+      "name": "Chinedu Eze",
+      "role": "DevOps Engineer",
+      "email": "chinedu@lagostech.com",
+      "joined": "2022-08-29"
+    },
+    {
+      "name": "Bola Ajayi",
+      "role": "Project Manager",
+      "email": "bola@lagostech.com",
+      "joined": "2023-03-10"
+    },
+    {
+      "name": "Ifeoma Okechukwu",
+      "role": "Technical Writer",
+      "email": "ifeoma@lagostech.com",
+      "joined": "2023-07-05"
+    },
+    {
+      "name": "Kelvin Obasi",
+      "role": "Full Stack Developer",
+      "email": "kelvin@lagostech.com",
+      "joined": "2023-05-20"
+    },
+    {
+      "name": "Aisha Lawal",
+      "role": "Machine Learning Engineer",
+      "email": "aisha@lagostech.com",
+      "joined": "2024-02-14"
+    },
+    {
+      "name": "Daniel Uduak",
+      "role": "Cloud Engineer",
+      "email": "daniel@lagostech.com",
+      "joined": "2022-12-01"
+    },
+    {
+      "name": "Fatima Yusuf",
+      "role": "QA Analyst",
+      "email": "fatima@lagostech.com",
+      "joined": "2023-10-16"
+    },
+    {
+      "name": "Gbenga Shonibare",
+      "role": "Cybersecurity Analyst",
+      "email": "gbenga@lagostech.com",
+      "joined": "2023-01-23"
+    },
+    {
+      "name": "Uchenna Duru",
+      "role": "Game Developer",
+      "email": "uchenna@lagostech.com",
+      "joined": "2023-04-08"
+    },
+    {
+      "name": "Lola Adeyemi",
+      "role": "Product Designer",
+      "email": "lola@lagostech.com",
+      "joined": "2023-08-11"
+    }
+  ]
+}
