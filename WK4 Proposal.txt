@@ -1,0 +1,33 @@
+Project Topic:
+Lagos City Nature & Culture Guide
+
+Description:
+The Lagos City Nature & Culture Guide will be an interactive, three‑page website showcasing the rich cultural heritage,
+natural attractions, and unique experiences available in Lagos, Nigeria. The site will provide visitors and locals with 
+reliable information, images, and data to explore landmarks, nature parks, art galleries, festivals, and historical sites.
+
+Features & Services:
+
+Home Page: A welcoming hero section with a Lagos cityscape, current weather in Lagos (via OpenWeatherMap API), and featured 
+cultural events.
+
+Attractions Page: Dynamically display at least 15 attractions (parks, museums, beaches, etc.) loaded from a local JSON file 
+with details like name, location, description, and an image.
+
+Culture & Events Page: Highlight annual festivals, traditional arts, and food spots with an interactive modal feature to 
+show event details.
+
+Additional Functionalities:
+
+Weather API integration for real‑time conditions.
+
+Local storage for saving “favorite” attractions.
+
+A responsive design that works on mobile and desktop.
+
+Social media meta tags for sharing.
+
+Purpose:
+To provide an engaging, informative resource for both locals and tourists, encouraging exploration of Lagos’ culture and 
+natural beauty while demonstrating modern, accessible, and responsive web development practices.
+
