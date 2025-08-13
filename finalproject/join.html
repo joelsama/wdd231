@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Join the Lagos Tech Community — submit your membership application." />
+  <meta name="author" content="Dan-Ogodogu Joel" />
+  <title>Join — Lagos Tech Community</title>
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/style.css"/>
+  <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+    <h1>Join the Community</h1>
+  </header>
+
+  <main>
+    <p id="visitMessage" style="margin:1rem 0;"></p>
+
+    <section class="form-section" aria-labelledby="joinFormHeading" style="max-width: 800px; margin: 0 auto;">
+      <h2 id="joinFormHeading">Membership Application</h2>
+      <!-- Use GET so values appear on thankyou.html via URLSearchParams -->
+      <form action="thankyou.html" method="GET" id="joinForm" novalidate>
+        <fieldset>
+          <legend>About You</legend>
+
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Ada Lovelace" required minlength="2" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="role">Role</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option>Developer</option>
+            <option>Designer</option>
+            <option>Product Manager</option>
+            <option>Data/AI</option>
+            <option>Founder</option>
+            <option>Student</option>
+            <option>Other</option>
+          </select>
+
+          <label for="organization">Organization (optional)</label>
+          <input id="organization" name="organization" type="text" placeholder="Company/School" />
+
+          <label for="goals">What do you hope to gain?</label>
+          <textarea id="goals" name="goals" rows="4" placeholder="Networking, mentorship, events, volunteering…"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Membership Level</legend>
+          <label><input type="radio" name="level" value="Basic" required /> Basic (Free)</label>
+          <label><input type="radio" name="level" value="Pro" /> Pro</label>
+          <label><input type="radio" name="level" value="Organization" /> Organization</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label><input type="checkbox" name="newsletter" value="yes" /> Subscribe to monthly newsletter</label>
+          <label><input type="checkbox" name="volunteer" value="yes" /> I’d like to volunteer at events</label>
+        </fieldset>
+
+        <!-- Helpful hidden fields -->
+        <input type="hidden" name="submittedAt" id="submittedAt" />
+        <button class="cta-button" type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lagos Tech Community</p>
+  </footer>
+
+  <!-- Lightweight module for visit message + timestamp -->
+  <script type="module">
+    // Last-visit localStorage message (meets rubric's Local Storage requirement)
+    const msg = document.getElementById('visitMessage');
+    const key = 'ltc_lastVisit';
+    const now = Date.now();
+    const last = localStorage.getItem(key);
+    if (last) {
+      const days = Math.floor((now - Number(last)) / (1000 * 60 * 60 * 24));
+      msg.textContent = days === 0
+        ? 'Welcome back! You last visited today.'
+        : `Welcome back! Your last visit was ${days} day(s) ago.`;
+    } else {
+      msg.textContent = 'Welcome! This is your first time on the Join page.';
+    }
+    localStorage.setItem(key, String(now));
+
+    // Populate hidden submittedAt with ISO time
+    const iso = new Date().toISOString();
+    const submittedAtInput = document.getElementById('submittedAt');
+    submittedAtInput.value = iso;
+
+    // Simple progressive enhancement: tighten up required fields before submit
+    document.getElementById('joinForm').addEventListener('submit', (e) => {
+      const form = e.currentTarget;
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        alert('Please complete the required fields.');
+      }
+    });
+
+    // Keep the footer year fresh
+    const y = document.getElementById('year');
+    if (y) y.textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Thank you for joining the Lagos Tech Community." />
+  <meta name="author" content="Dan-Ogodogu Joel" />
+  <title>Thank You — Lagos Tech Community</title>
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/style.css"/>
+  <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <h1>Thank You 🎉</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="detailsHeading" style="max-width: 800px; margin: 0 auto;">
+      <h2 id="detailsHeading">Your Submission</h2>
+      <p>We’ve received your application. A summary is shown below:</p>
+
+      <!-- Display values from URLSearchParams -->
+      <dl id="submissionDetails" style="background:#fff; padding:1rem; border-radius:8px;"></dl>
+
+      <p style="margin-top:1rem;">
+        We’ll get back to you soon. Meanwhile, check out the <a href="directory.html">Member Directory</a> or <a href="discover.html">Discover</a> page.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lagos Tech Community</p>
+  </footer>
+
+  <script type="module">
+    // Parse URLSearchParams and render nicely
+    const params = new URLSearchParams(window.location.search);
+    const details = document.getElementById('submissionDetails');
+
+    // A mapping for nicer labels and ordering
+    const fields = [
+      ['fullName','Full Name'],
+      ['email','Email'],
+      ['role','Role'],
+      ['organization','Organization'],
+      ['level','Membership Level'],
+      ['newsletter','Newsletter'],
+      ['volunteer','Volunteer'],
+      ['goals','Goals'],
+      ['submittedAt','Submitted At']
+    ];
+
+    const frag = document.createDocumentFragment();
+    fields.forEach(([key, label]) => {
+      if (!params.has(key)) return;
+      const value = params.getAll(key).join(', ');
+      const dt = document.createElement('dt');
+      const dd = document.createElement('dd');
+      dt.textContent = label;
+      dt.style.fontWeight = 'bold';
+      dt.style.marginTop = '0.5rem';
+      dd.textContent = value || '—';
+      dd.style.marginLeft = '0';
+      frag.append(dt, dd);
+    });
+    if (!frag.childNodes.length) {
+      const p = document.createElement('p');
+      p.textContent = 'No submission data found.';
+      details.replaceWith(p);
+    } else {
+      details.appendChild(frag);
+    }
+
+    // Footer year
+    const y = document.getElementById('year');
+    if (y) y.textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

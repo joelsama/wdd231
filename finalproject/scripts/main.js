@@ -27,3 +27,14 @@ async function loadMembers() {
 }
 
 loadMembers();
+
+const lastVisit = localStorage.getItem('lastVisit');
+const now = Date.now();
+if (lastVisit) {
+  const daysAgo = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+  document.querySelector('#visitMessage').textContent = 
+    `Welcome back! Your last visit was ${daysAgo} day(s) ago.`;
+} else {
+  document.querySelector('#visitMessage').textContent = 'Welcome! This is your first visit.';
+}
+localStorage.setItem('lastVisit', now);
